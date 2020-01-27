@@ -10,11 +10,11 @@
     <title>Form Next Step With Validation</title>
 </head>
 <body>
-<div class="container">
-    <div class="row">
+<div class="container mt-5" style="border: 1px solid black;">
+
         <!--Step 1-->
         <div id="step_1">
-            <div class="row">
+            <div class="row p-5">
                 <div class="col-12">
                     <label class="form-control-label" for="fname">First name</label>
                     <input type="text" id="fname" name="fname" class="form-control"
@@ -25,7 +25,7 @@
         </div>
         <!--Step 2-->
         <div id="step_2">
-            <div class="row">
+            <div class="row p-5">
                 <div class="col-12">
                     <label class="form-control-label" for="lname">Last name</label>
                     <input type="text" id="lname" name="lname" class="form-control"
@@ -34,10 +34,10 @@
                 </div>
             </div>
         </div>
-    </div>
+
     <!--Step 3-->
     <div id="step_3">
-        <div class="row">
+        <div class="row p-5">
             <div class="col-12">
                 <label class="form-control-label" for="otherName">Other name</label>
                 <input type="text" id="otherName" name="otherName" class="form-control"
@@ -49,7 +49,7 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-between p-2">
             <button type="button" id="previousStep" class="btn btn-secondary">Previous Step</button>
-            <button type="button" id="nextStep" data-step="1" class="btn btn-success-custom">Next Step</button>
+            <button type="button" id="nextStep" data-step="1" class="btn btn-success">Next Step</button>
             <button type="button" id="finshStep" class="btn btn-success-custom">Finish</button>
         </div>
     </div>
