@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="validation.css">
+    <title>Form Next Step With Validation</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <!--Step 1-->
+        <div id="step_1">
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-control-label" for="fname">First name</label>
+                    <input type="text" id="fname" name="fname" class="form-control"
+                           placeholder="First name" autocomplete="off">
+                    <span id="fnameMsg"></span>
+                </div>
+            </div>
+        </div>
+        <!--Step 2-->
+        <div id="step_2">
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-control-label" for="lname">Last name</label>
+                    <input type="text" id="lname" name="lname" class="form-control"
+                           placeholder="Last name" autocomplete="off">
+                    <span id="lnameMsg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Step 3-->
+    <div id="step_3">
+        <div class="row">
+            <div class="col-12">
+                <label class="form-control-label" for="otherName">Other name</label>
+                <input type="text" id="otherName" name="otherName" class="form-control"
+                       placeholder="Other name" autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 d-flex justify-content-between p-2">
+            <button type="button" id="previousStep" class="btn btn-secondary">Previous Step</button>
+            <button type="button" id="nextStep" data-step="1" class="btn btn-success-custom">Next Step</button>
+            <button type="button" id="finshStep" class="btn btn-success-custom">Finish</button>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="validation.js"></script>
+<script src="nextFormWithvalid.js"></script>
+
+<script>
+    let max = 3;
+    let validationJson = '{"validationJson":[' +
+        '{"id":"fname","msg":"fnameMsg","valdationType":"required|min:2|alpha","step":"1" },' +
+        '{"id":"lname","msg":"lnameMsg","valdationType":"required|min:2|alpha","step":"2" }' +
+        ']}';
+    formSteps(max, validationJson);
+
+    $('#finshStep').on('click', function (e) {
+        e.preventDefault();
+        alert("FINITO");
+    });
+</script>
