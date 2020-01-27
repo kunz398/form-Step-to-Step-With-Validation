@@ -1,3 +1,4 @@
+[Demo](https://kunz398.github.io/form-Step-to-Step-With-Validation/.)
 in order to use  the forms in steps all you got to do is surround your html with steps you need *example*:
 
     <form>
@@ -19,7 +20,13 @@ in order to use  the forms in steps all you got to do is surround your html with
             	     <input type="text" id="otherName" name="otherName" placeholder="Othername">  	  
                 </div>  
     </form>
+   
+     <button type="button" id="previousStep" >Previous Step</button>  
+     <button type="button" id="nextStep" data-step="1" >Next Step</button>  
+     <button type="button" id="finshStep">Finish</button>  
+ 
 
+</div>
 and as for  the j-query (this uses my [validation library](https://github.com/kunz398/Custom-FrontEnd-Validation) so make sure to see that documentation before using this)
 all you need to pass is the validations and the maximum steps in your form
 *Example*
@@ -38,3 +45,4 @@ all you need to pass is the validations and the maximum steps in your form
       });  
     </script>
 
+[Demo](https://kunz398.github.io/form-Step-to-Step-With-Validation/.)
